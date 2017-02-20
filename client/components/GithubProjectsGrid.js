@@ -2,16 +2,23 @@ import React from 'react';
 import GithubProject from './GithubProject';
 
 const GithubProjectsGrid = React.createClass({
-    handleClick(e) {
+    getRepos(e) {
         e.preventDefault;
-        console.log("test");
-        this.props.getGithubProjects("pawlakartur");
+        const author = this.refs.author.value;
+        this.props.getGithubProjects(author);
+        this.refs.authorForm.reset();
     },
     render() {
         return (
             <div>
-                GithubProject Grid
-                <input type="button" value="get repos" ref="getRepos" onClick={this.handleClick}/>
+                <form ref="authorForm">
+                    <label htmlFor="author">Author:</label>
+                    <input id="author" type="text" ref="author"/>
+                    <input type="button" value="get repos" onClick={this.getRepos}/>
+                </form>
+                <div>
+                    {this.props.githubProjects.map((project, i) => <GithubProject {...this.props} key={i} i={i} project={project}/>)}
+                </div>
             </div>
         )
     }

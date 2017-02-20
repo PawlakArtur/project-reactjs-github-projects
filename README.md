@@ -19,6 +19,6 @@ TODO:
 - [x] Create basic action creators.
 - [x] Create basic reducers.
 - [x] Create async calls.
-- [] Create projects grid component.
-- [] Create project card component.
-- [] Style components.
+- [ ] Create projects grid component.
+- [ ] Create project card component.
+- [ ] Style components.

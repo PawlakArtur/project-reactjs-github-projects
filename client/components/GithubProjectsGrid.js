@@ -11,12 +11,12 @@ const GithubProjectsGrid = React.createClass({
     render() {
         return (
             <div>
-                <form ref="authorForm">
+                <form ref="authorForm" className="github-project-form">
                     <label htmlFor="author">Author:</label>
                     <input id="author" type="text" ref="author"/>
                     <input type="button" value="get repos" onClick={this.getRepos}/>
                 </form>
-                <div>
+                <div className="github-project-grid">
                     {this.props.githubProjects.map((project, i) => <GithubProject {...this.props} key={i} i={i} project={project}/>)}
                 </div>
             </div>

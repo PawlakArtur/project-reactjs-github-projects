@@ -4,7 +4,7 @@ const GithubProject = React.createClass({
     render() {
         const { project, i } = this.props;
         return (
-            <div>
+            <div className="github-project">
                 <div>Project name: <a href={project.url}>{project.name}</a></div>
                 <div>Owner name: {project.owner.login}</div>
                 <div>Description: {project.description}</div>

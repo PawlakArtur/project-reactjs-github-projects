@@ -1,4 +1,47 @@
+$border-radius-inputs: 2px;
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  background: #8667d1;
+}
+main {
+    .github-project-form {
+      height: 30px;
+      line-height: 30px;
+      padding: 5px;
+      input {
+        height: 21px;
+        border: 1px solid #ddd;
+        &:first-of-type {
+          margin-left: 5px;
+          border-radius: $border-radius-inputs 0 0 $border-radius-inputs;
+        }
+        &:last-of-type {
+          border-radius: 0 $border-radius-inputs $border-radius-inputs 0;
+
+        }
+      }
+    }
+  .github-project-grid {
+    width: 100%;
+    .github-project {
+      display: inline-block;
+      background: #8599f8;
+      box-shadow: 1px 1px 5px 0 #000;
+      width: 40%;
+      margin: 5px;
+      padding: 5px;
+      vertical-align: top;
+      border-radius: $border-radius-inputs;
+      a {
+        color: #000;
+      }
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
 }
